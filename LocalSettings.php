@@ -19,8 +19,14 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 ## Uncomment this to disable output compression
 # $wgDisableOutputCompression = true;
 
-$wgSitename = "JobeLaw Wiki";
-$wgMetaNamespace = "JobeLaw_Wiki";
+$wgSitename = "JobeLaw OpenBook";
+$wgMetaNamespace = "JobeLaw_OpenBook";
+
+function efLoginFormMessage( &$template ) {
+	$template->set( 'header', "(For an account to read and/or edit articles on OpenBook, contact Jezz Lucena via email at jezz@jobelaw.com, or in person at room 212 )");
+	return true;
+}
+$wgHooks['UserLoginForm'][]='efLoginFormMessage';
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
