@@ -26,7 +26,9 @@ function efLoginFormMessage( &$template ) {
 	$template->set('header', "(For an account to read and/or edit articles on OpenBook, contact Jezz Lucena via email at jezz@jobelaw.com, or in person at room 212)");
 	return true;
 }
-$wgHooks['UserLogin'][]='efLoginFormMessage';
+$wgHooks['Special:UserLogin'][]='efLoginFormMessage';
+
+$wgAllowSiteCSSOnRestrictedPages = true;
 
 ## The URL base path to the directory containing the wiki;
 ## defaults for all runtime URL paths are based off of this.
