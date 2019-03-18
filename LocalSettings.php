@@ -22,12 +22,6 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgSitename = "JobeLaw OpenBook";
 $wgMetaNamespace = "JobeLaw_OpenBook";
 
-function efLoginFormMessage( &$template ) {
-	$template->set('header', "(For an account to read and/or edit articles on OpenBook, contact Jezz Lucena via email at jezz@jobelaw.com, or in person at room 212)");
-	return true;
-}
-$wgHooks['Special:UserLogin'][]='efLoginFormMessage';
-
 $wgAllowSiteCSSOnRestrictedPages = true;
 
 ## The URL base path to the directory containing the wiki;
@@ -38,7 +32,7 @@ $wgAllowSiteCSSOnRestrictedPages = true;
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "https://jobelaw-wiki.herokuapp.com";
+$wgServer = "https://book.openb.us";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
