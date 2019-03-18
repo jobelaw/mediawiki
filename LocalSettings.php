@@ -44,8 +44,17 @@ $wgLogo = "$wgResourceBasePath/resources/assets/openbook-logo.png";
 $wgEnableEmail = true;
 $wgEnableUserEmail = true; # UPO
 
-$wgEmergencyContact = "jezz@gmail.com";
-$wgPasswordSender = "jezz@gmail.com";
+$wgEmergencyContact = "jezz@jobelaw.com";
+$wgPasswordSender = "jezz@jobelaw.com";
+
+$wgSMTP = array(
+ 'host'     => "smtp.sendgrid.net", // could also be an IP address. Where the SMTP server is located
+ 'IDHost'   => "book.openb.us",      // Generally this will be the domain name of your website (aka mywiki.org)
+ 'port'     => 25,                 // Port to use when connecting to the SMTP server
+ 'auth'     => true,               // Should we use SMTP authentication (true or false)
+ 'username' => "apikey",     // Username to use for SMTP authentication (if being used)
+ 'password' => "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"       // Password to use for SMTP authentication (if being used)
+);
 
 $wgEnotifUserTalk = true; # UPO
 $wgEnotifWatchlist = true; # UPO
